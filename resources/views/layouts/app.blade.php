@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Lembur Crew') }}</title>
+    <title>{{ config('app.name', 'LemburCrew') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #FCF6EB">
             <div class="container" >
                 <a class="navbar-brand" style="color: #EA9A00; font-weight: bold" href="{{ url('/') }}">
-                    Lembur Crew
+                    LemburCrew
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,7 @@
                                             My Profile
                                         </a>
                                     </li>
-
+ 
                                     <li>
                                         <a class="dropdown-item" href="#">
                                             My Order

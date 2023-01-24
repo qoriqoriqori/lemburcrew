@@ -30,12 +30,12 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                    <a class="dropdown-item" href="{{ url('my-orders') }}">
+                    <a class="dropdown-item" href="#">
                       Riwayat
                     </a>
                 </li>
                 <li>
-                    <a class="dropdown-item" href="{{ url('my-profile') }}">
+                    <a class="dropdown-item" href="#">
                         Data Diri
                     </a>
                 </li>

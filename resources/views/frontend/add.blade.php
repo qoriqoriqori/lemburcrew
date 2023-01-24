@@ -8,7 +8,7 @@
 
 <div class="container mt-3">
     <div class="card-body">
-        <form action="#" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('insert-lembur') }}" method="POST" enctype="multipart/form-data">
         @csrf
     
         <div class="row"> 
@@ -18,17 +18,14 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="">Tanggal</label>
-                        <input type="text" class="form-control" name="tanggal">
-                    </div>
+                        <input id="tanggal" type="text" class="form-control mb-1 @error('tanggal') is-invalid @enderror" name="tanggal" 
+                        value="{{ old('tanggal') }}" required autocomplete="tanggal" autofocus>
 
-                    <div class="col-md-6 mb-3">
-                        <label for="">NIK</label>
-                        <input type="text" class="form-control" name="nik">
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <label for="">Nama</label>
-                        <input type="text" class="form-control" name="nama">
+                        @error('tanggal')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
 
                     <div class="col-md-6 mb-3">
@@ -37,13 +34,23 @@
                     </div>
 
                     <div class="col-md-6 mb-3">
+                        <label for="">NIK</label>
+                        <input type="text" class="form-control" name="nik">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
                         <label for="">Jam Selesai</label>
                         <input type="text" class="form-control" name="jam_selesai">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="">Nama</label>
+                        <input type="text" class="form-control" name="nama">
                     </div>
                     
                     <div class="col-md-6 mb-3">
                         <label for="">Jumlah Jam</label>
-                        <input type="text" class="form-control" name="jumlah_jam">
+                        <input type="text" class="form-control" name="total_jam">
                     </div>
                     
                     <div class="col-md-12">
